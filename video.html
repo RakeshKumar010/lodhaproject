@@ -1,0 +1,349 @@
+
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel=“canonical” href=“” />
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <link rel="icon" href="img/favicon.png" type="image/png" sizes="16x16">
+        <link href="fonts/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="fonts/elegant-fonts.css" rel="stylesheet" type="text/css">
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
+        <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
+        <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <title>Hillcrest, Pune</title>
+    </head>
+
+<body class="has-loading-screen links-hover-effect" data-spy="scroll" data-target=".navigation">
+    <div class="page-wrapper" id="page-top">
+        <header id="page-header">
+            <nav class="navigation nav-btn-only background-is-dark">
+                <div class="container">
+                    <div class="wrapper">
+                        <div class="left">
+                            <a href="index.html" class="brand"><img src="img/logo.svg" alt=""></a>
+                        </div>
+                        <!--end left-->
+						<div class="right">
+                        <ul class="nav navigation-links animate">
+                            <li><a href="index.html#page-top" class="scroll">Home</a></li>
+                            <li><a href="index.html#about" class="scroll">About</a></li>
+                            <li><a href="index.html#floorplan" class="scroll">Floor Plan</a></li>
+                            <li><a href="index.html#gallery" class="scroll">Gallery</a></li>
+                            <li><a href="index.html#pricing" class="scroll">Price</a></li>
+                            <li><a href="index.html#contact" class="scroll">Contact</a></li>
+                        </ul>
+                        <div class="nav-btn">
+                            <figure></figure>
+                            <figure></figure>
+                            <figure></figure>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <!--end container-->
+            </nav>
+            <!--end navigation-->
+            <div class="hero-section background-is-dark">
+                <div class="wrapper">
+                    <div class="hero-title">
+                        <div class="container">
+                            <h1 class="animate">Luxury life...<br>Coming to your town.</h1>
+                            <div class="animate">
+                                <p class="width-50">
+                                    Nam in sodales massa. Donec at ullamcorper diam. Pellentesque habitant morbi tristique
+                                    senectus et netus et malesuada fames ac turpis egestas.
+                                </p>
+                            </div>
+                            <form class="animate" id="form-hero">
+                                <label for="form-hero-email">Enter your email for the latest news</label>
+                                <div class="row">
+                                    <div class="col-md-5 col-sm-5">
+                                        <div class="input-group">
+                                            <input type="email" class="form-control" id="form-hero-email" name="email" placeholder="Your email" required="">
+                                            <span class="input-group-btn">
+                                                <button class="btn" type="submit"><i class="arrow_right"></i></button>
+                                            </span>
+                                        </div><!-- /input-group -->
+                                    </div>
+                                </div>
+                            </form>
+                            <!--end form-hero-->
+                        </div>
+                        <!--end container-->
+                    </div>
+                    <!--end hero-title-->
+                </div>
+                <!--end wrapper-->
+    
+                <div class="video-background">
+                    <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1&mute=1" width="640" height="360"></iframe>
+                </div>
+                <!--end video-background-->
+            </div>
+            <!--end hero-section-->
+        </header>
+        <!--end page-header-->
+    
+    </div>
+    <!--end page-wrapper-->
+
+
+
+<!--end outer-wrapper-->
+<script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.validate.min.js"></script>
+<script type="text/javascript" src="js/owl.carousel.min.js"></script>
+<script type="text/javascript" src="js/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="js/scrollReveal.min.js"></script>
+<script type="text/javascript" src="js/readmore.min.js"></script>
+<script type="text/javascript" src="js/pace.min.js"></script>
+<script type="text/javascript" src="js/custom.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+	  
+      <script>
+		
+$("#topform").validate({
+                rules: {
+                    name: "required",
+                 
+                    mobile: {
+                        required: true,
+                        number: true,
+                        minlength: 10,
+                        maxlength: 10
+                    }            
+                    
+                },
+                
+                messages: {
+                    name: "Your name",
+                    mobile: {
+                        required: "Mobile number",
+                        number: "Invalid Mobile Number"
+                    },
+                email: {
+                        required: "Enter Email",
+                        email: "Invalid Email"
+                    }
+                
+         
+           },
+         submitHandler: function (form1) {
+                     $.ajax({
+                         type: "POST",
+                     url: "post.php",
+                         data: $(topform).serialize(),
+                     beforeSend: function(){
+                                    $('#response').show();
+                                    $('#response').html("<img src='img/loading.gif' />");
+                    },                
+                         success:function(data){
+                    if(data == 200){
+                            $("#name").val(''); $("#email").val('');  $("#mobile").val('');  $("#agree").val('');
+                          window.setTimeout(function(){window.location.href="action.php"; }, 100);
+                            }else{
+                              alert(data);   
+                              $('#response').hide();
+                      }
+         
+                        
+                           }
+                     });
+                     return false; // required to block normal submit since you used ajax
+                 }
+           
+         });
+
+	  $("#bottomform").validate({
+			  rules: {
+				  name: "required",
+			   
+				  mobile: {
+					  required: true,
+					  number: true,
+					  minlength: 10,
+					  maxlength: 10
+				  },
+			 email: {
+					  required:  true,
+					  email: true,
+				  },
+			  message: { required: true    },               
+	   
+			  agree: { required: true    }               
+				  
+			  },
+			  
+			  messages: {
+				  name: "Your name",
+				  mobile: {
+					  required: "Mobile number",
+					  number: "Invalid Mobile Number"
+				  },
+			  email: {
+					  required: "Enter Email",
+					  email: "Invalid Email"
+				  },
+			   message: { required:"Message : Let us know about your Budget" },    
+			   agree: { required:"I authorize the marketing partner to call me between 9 AM to 9 PM, to provide details of the project." }               
+			  
+	   
+		 },
+	   submitHandler: function (bottomform) {
+				   $.ajax({
+					   type: "POST",
+				   url: "post.php",
+					   data: $(bottomform).serialize(),
+				   beforeSend: function(){
+								  $('#bottresponse').show();
+								  $('#bottresponse').html("<img src='img/loading.gif' />");
+				  },                
+					   success:function(data){
+				  if(data == 200){
+						  $("#name").val(''); $("#email").val('');  $("#mobile").val('');  $("#agree").val('');
+						window.setTimeout(function(){window.location.href="action.php"; }, 100);
+						  }else{
+							alert(data);   
+							$('#bottresponse').hide();
+					}
+	   
+					  
+						 }
+				   });
+				   return false; // required to block normal submit since you used ajax
+			   }
+		 
+	   });
+	   
+	   ///////////////// end bottom form////////////////////////
+               
+	   ///////////////////////////////bottom form start ///////////////
+	   $("#popupform").validate({
+			  rules: {
+				  name: "required",
+			   
+				  mobile: {
+					  required: true,
+					  number: true,
+					  minlength: 10,
+					  maxlength: 10
+				  },
+			 email: {
+					  required:  true,
+					  email: true,
+				  }        
+				  
+			  },
+			  
+			  messages: {
+				  name: "Your name",
+				  mobile: {
+					  required: "Mobile number",
+					  number: "Invalid Mobile Number"
+				  },
+			  email: {
+					  required: "Enter Email",
+					  email: "Invalid Email"
+				  } 
+	   
+		 },
+	   submitHandler: function (popupform) {
+				   $.ajax({
+					   type: "POST",
+				   url: "post.php",
+					   data: $(popupform).serialize(),
+				   beforeSend: function(){
+								  $('#popupresponse').show();
+								  $('#popupresponse').html("<img src='img/loading.gif' />");
+				  },                
+					   success:function(data){
+				  if(data == 200){
+						  $("#name").val(''); $("#email").val('');  $("#mobile").val('');  
+						window.setTimeout(function(){window.location.href="action.php"; }, 100);
+						  }else{
+							alert(data);   
+							$('#popupresponse').hide();
+					}
+	   
+					  
+						 }
+				   });
+				   return false; // required to block normal submit since you used ajax
+			   }
+		 
+	   });
+	   
+	///////////////// end bottom form////////////////////////
+          
+	///////////////////////////////download pdf form start ///////////////
+	   $("#downloadform").validate({
+			  rules: {
+				  name: "required",
+			   
+				  mobile: {
+					  required: true,
+					  number: true,
+					  minlength: 10,
+					  maxlength: 10
+				  },
+			 email: {
+					  required:  true,
+					  email: true,
+				  }        
+				  
+			  },
+			  
+			  messages: {
+				  name: "Your name",
+				  mobile: {
+					  required: "Mobile number",
+					  number: "Invalid Mobile Number"
+				  },
+			  email: {
+					  required: "Enter Email",
+					  email: "Invalid Email"
+				  } 
+	   
+		 },
+	   submitHandler: function (downloadform) {
+				   $.ajax({
+					   type: "POST",
+				   url: "post.php",
+					   data: $(downloadform).serialize(),
+				   beforeSend: function(){
+								  $('#downloadresponse').show();
+								  $('#downloadresponse').html("<img src='img/loading.gif' />");
+				  },                
+					   success:function(data){
+				  if(data == 200){
+						  $("#name").val(''); $("#email").val('');  $("#mobile").val('');  
+						window.setTimeout(function(){window.location.href="download.php"; }, 100);
+						  }else{
+							alert(data);   
+							$('#downloadresponse').hide();
+					}
+	   
+					  
+						 }
+				   });
+				   return false; // required to block normal submit since you used ajax
+			   }
+		 
+	   });
+	///////////////// download pdf form////////////////////////
+				
+    
+
+      </script>
+	  
+	
+
+</body>
