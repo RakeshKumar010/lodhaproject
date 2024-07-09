@@ -1133,7 +1133,7 @@ ul.check-marks li:before {
   /* box-shadow: rgba(45, 35, 66, 0.4) 0 0px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px ; */
   padding: 10px;
   /* min-height: fit-content; */
-  width: 40%;
+  width: 35%;
  
 
 }
@@ -1204,6 +1204,7 @@ border: 1px solid black;
   display: none;
   text-align: center;
 position: absolute;
+box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 
 left: 110px;
 /* text-wrap: nowrap; */
