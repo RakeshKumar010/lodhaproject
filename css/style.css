@@ -1024,7 +1024,7 @@ ul.check-marks li:before {
 
 .site-plan .nav-tabs {
   border: none;
-  margin: 0 0 30px 0;
+  margin:20px 0;
 }
 
 .site-plan .nav-tabs li.active {
@@ -1069,7 +1069,7 @@ ul.check-marks li:before {
 .site-img img {
   width: 100%;
   border: 15px solid rgb(241 191 100 / 23%);
-  filter: blur(5px);
+  filter: blur(2px);
 }
 
 .site-plan .description h3 {
@@ -1124,7 +1124,7 @@ ul.check-marks li:before {
   top: 50%;
   z-index:98;
   display: flex;
- 
+ gap: 10px;
   justify-content: start;
   align-items: center;
   border-radius: 0 20px 20px 0;
@@ -1133,7 +1133,7 @@ ul.check-marks li:before {
   /* box-shadow: rgba(45, 35, 66, 0.4) 0 0px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px ; */
   padding: 10px;
   /* min-height: fit-content; */
-  width: 35%;
+  /* width: 35%; */
  
 
 }
@@ -3829,11 +3829,11 @@ form .status i {
 }
  
   .offer-slide{
-    width: 90%;
+    width: 300px;
   }
   .side-btn-main{
     padding: 2px;
-    width: 90%;
+    /* width: 90%; */
   left: -60px;
 
   }
@@ -4202,6 +4202,7 @@ form .status i {
   .site-plan .nav-tabs > li > a {
     font-size: 14px;
     padding: 5px 8px;
+    /* border: 1px solid; */
   }
 
   .detail {
