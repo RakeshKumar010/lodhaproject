@@ -1122,7 +1122,7 @@ ul.check-marks li:before {
   /* transform: translateX(200px); */
   left: 0;
   top: 50%;
-  z-index: 99999;
+  z-index: 999;
   display: flex;
   justify-content: start;
   align-items: center;
