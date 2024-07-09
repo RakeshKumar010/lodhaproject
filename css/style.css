@@ -1120,27 +1120,43 @@ ul.check-marks li:before {
   position: fixed;
   transform: translateY(-50%);
   /* transform: translateX(200px); */
-  left: 0;
+  left: -68px;
   top: 50%;
   z-index:98;
   display: flex;
+ 
   justify-content: start;
   align-items: center;
   border-radius: 0 20px 20px 0;
-  background-color: white;
+  /* background-color: white; */
+  
   /* box-shadow: rgba(45, 35, 66, 0.4) 0 0px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px ; */
   padding: 10px;
   /* min-height: fit-content; */
-  border: 2px solid gray;
+  width: 40%;
+ 
 
 }
+.special-offer{
+  font-size: 20px;
+  transform: rotate(90deg);
+  /* height: 100%; */
+  background-color: white;
+  margin: 0;
+  padding: 10px;
+  border-radius: 10px 10px 0 0;
+  font-weight: 600;
+  color: #e8b63b;
+  cursor: pointer;
+  animation: bounceoffer 2s infinite alternate; 
+border: 1px solid black;
 
+}
 .side-btn-img {
   /* transform: rotate(90deg); */
   width: 80px;
   cursor: pointer;
   padding: 5px;
-  animation: bounce 2s infinite alternate; /* Bounce animation */
 }
  #getstartId{
   background-color: white;
@@ -1155,25 +1171,57 @@ ul.check-marks li:before {
   line-height: 26px;
 }
 
-@keyframes bounce {
+@keyframes bounceoffer {
   0% {
-    transform: scale(1);
+  background-color: #ffa401;
+  color: #000;
+   
   }
   100% {
-    transform: scale(1.1);
+   
+    background-color: #fff;
+    color: #000;
+
+
   }
+}
+.pricing-boxes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+.floor-plan{
+  width: 350px;
+}
+
+.offer-slide {
+  /* width: 500px; */
+  background: #fff;
+  color: black;
+  padding: 10px ;
+  border-radius: 10px;
+  display: none;
+  text-align: center;
+position: absolute;
+
+left: 110px;
+/* text-wrap: nowrap; */
+width: 100%;
+  /* transform: translateX(200px); */
+}
+/* new code  */
+.location-icon{
+  width: 2%;
 }
 
 
-.offer-slide {
-  width: 500px;
-  background: #fff;
-  color: black;
-  padding: 10px;
-  border-radius: 10px;
-  display: none;
-
-  /* transform: translateX(-200px); */
+.map-adv-main{
+  display: flex;
+  /* justify-content: center; */
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .offer-card{
@@ -2808,7 +2856,7 @@ span.amenities-sec {
   margin-bottom: 20px;
 }
 .pricing-boxes .price-box h3 {
-  font-size: 24px;
+  font-size: 20px;
 }
 .pricing-boxes .price-box .price {
   font-size: 18px;
@@ -3597,7 +3645,7 @@ form .status i {
   }
 
   .pricing-boxes .price-box h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
   .pricing-boxes .price-box .price {
     font-size: 16px;
@@ -3729,7 +3777,7 @@ form .status i {
   }
 
   .pricing-boxes .price-box h3 {
-    font-size: 20px;
+    font-size: 16px;
   }
   .pricing-boxes .price-box .price {
     font-size: 16px;
@@ -3775,14 +3823,18 @@ form .status i {
     background-color: transparent;
     color: white;
   }
-
+.location-icon{
+  width: 10%;
+}
  
   .offer-slide{
     width: 90%;
   }
   .side-btn-main{
     padding: 2px;
+    width: 90%;
   }
+ 
   .mobile-bottom {
     display: block;
   }
@@ -4160,7 +4212,7 @@ form .status i {
     padding-top: 0px;
   }
   .pricing-boxes .price-box h3 {
-    font-size: 20px;
+    font-size: 16px;
     margin: 0;
   }
 
@@ -4192,12 +4244,12 @@ form .status i {
 .button-30 {
   align-items: center;
   appearance: none;
-  background-color: #FCFCFD;
+  background-color: #ffa400;
   border-radius: 4px;
   border-width: 0;
   box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#ffa400 0 -3px 0 inset;
   box-sizing: border-box;
-  color: #36395A;
+  color: #ffffff;
   cursor: pointer;
   display: inline-flex;
   font-family: "JetBrains Mono",monospace;
@@ -4220,7 +4272,11 @@ form .status i {
   font-size: 18px;
   /* font-family: u; */
   text-transform: uppercase;
+  border-radius: 20px;
+  text-align: center;
+/* margin: 10px 0; */
 }
+
 
 .button-30:focus {
   box-shadow: #ffa400 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #fcf300 0 -3px 0 inset;
@@ -4235,3 +4291,6 @@ form .status i {
   box-shadow: #ffa400 0 3px 7px inset;
   transform: translateY(2px);
 }
+
+
+
