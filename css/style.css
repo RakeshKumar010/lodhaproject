@@ -1122,7 +1122,7 @@ ul.check-marks li:before {
   /* transform: translateX(200px); */
   left: 0;
   top: 50%;
-  z-index: 999;
+  z-index:98;
   display: flex;
   justify-content: start;
   align-items: center;
@@ -3770,6 +3770,10 @@ form .status i {
     width: 60px;
   padding: 5px;
 
+  }
+  #getstartId{
+    background-color: transparent;
+    color: white;
   }
 
  
