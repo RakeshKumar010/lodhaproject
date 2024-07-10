@@ -1228,6 +1228,14 @@ left: 110px;
   border-radius: 10px;
   transition: all 0.50s;
 }
+.header-text h3{
+  font-size: 24px;
+  font-weight: 800;
+}
+.header-text p{
+  font-size: 17px;
+  font-weight: 500;
+}
 .floor-text:hover{
   scale: 1.1;
   background-color: #e8b735;
