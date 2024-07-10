@@ -58,9 +58,6 @@ setTimeout(() => {
     getstartId.click()
 }, 5000);
 
-setInterval(()=>{
-    getstartId.click()
-
-},17000)
+ 
  
  
