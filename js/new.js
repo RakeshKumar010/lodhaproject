@@ -56,11 +56,11 @@ const getstartId =document.getElementById('getstartId')
 
 setTimeout(() => {
     getstartId.click()
-}, 3000);
+}, 5000);
 
-
-setInterval(() => {
+setInterval(()=>{
     getstartId.click()
-    
-}, 12000);
+
+},17000)
+ 
  
