@@ -40,7 +40,7 @@ if(mail($to,$subject,$message,$headers)) //Send an Email. Return true on success
 
 
 {
-echo "<script>window.location.href='thankuPage.html';</script>";
+echo "Successfully submitted";
 }
 else
 {
