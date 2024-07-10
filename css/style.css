@@ -1215,7 +1215,34 @@ left: 110px;
 .location-icon{
   width: 2%;
 }
+.floor-plan-container{
+  display: flex ;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+.floor-plan-container .floor-text{
+  border: 1px solid;
+  padding: 5px ;
+  text-align: center;
+  border-radius: 10px;
+  transition: all 0.50s;
+}
+.floor-text:hover{
+  scale: 1.1;
+  background-color: #e8b735;
+  border: 1px white;
+  color: white;
+  font-weight: 600;
+}
 
+.floor-plan-container .active{
+  scale: 1.1;
+  background-color: #e8b735;
+  border: 1px white;
+  color: white;
+  font-weight: 600;
+}
 
 .map-adv-main{
   display: flex;
