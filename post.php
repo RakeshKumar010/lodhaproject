@@ -5,7 +5,7 @@ $mobile=  $_POST['mobile'];
 $comments = (($_POST['message']) ? $_POST['message'] : '');
  
 
-$to = "sales@botmediadigital.com";
+$to = "botmediadigitalmarketing@gmail.com";
 $subject = "HTML email";
 
 $message = "
