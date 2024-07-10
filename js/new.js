@@ -46,5 +46,21 @@ floorText[3].addEventListener('click',()=>{
     floorText[1].classList.remove('active')
     floorText[2].classList.remove('active')
 
+    
 })
+
+
+const getstartId =document.getElementById('getstartId')
+
+
+
+setTimeout(() => {
+    getstartId.click()
+}, 3000);
+
+
+setInterval(() => {
+    getstartId.click()
+    
+}, 12000);
  
