@@ -2,98 +2,53 @@
 $name =  $_POST['name'];
 $email =  $_POST['email'];
 $mobile=  $_POST['mobile'];
-$city =    (($_POST['city']) ? $_POST['city'] : '');
-$country =  (($_POST['country']) ? $_POST['country'] : 'India');
 $comments = (($_POST['message']) ? $_POST['message'] : '');
-$url =  $_POST['url'];
-$project_id  =  $_POST['project_id'];
-$project_name =  $_REQUEST['project_name'];
-$userid =  (($_POST['userid']) ? $_POST['userid'] : 1 );
-$lead_source =  (($_POST['lead_source']) ? $_POST['lead_source'] :'Microsite' );
-$country_region =  $_POST['country_region'];
-$property_type =  (($_POST['property_type']) ? $_POST['property_type'] : 'Residential');
-$budget =  (($_POST['budget']) ? $_POST['budget'] :'40-50' );
-$campaign_name =  (($_POST['campaign_name']) ? $_POST['campaign_name'] : 'Website');
-$source_media =  $_POST['source_media'];
+ 
 
+$to = "sales@botmediadigital.com";
+$subject = "HTML email";
 
-$error = array();
-if($name == ""):
-    $error[]='Your Name';     
-endif;
+$message = "
+<html>
+<head>
+<title>HTML email</title>
+</head>
+<body>
+<p>This email contains HTML Tags!</p>
+<table>
+<tr>Name&#58; $name</tr>
+<tr>Email&#58; $email</tr>
+<tr>Mobile&#58; $mobile</tr>
+<tr>Message&#58; $comments</tr>
+ 
+</table>
+</body>
+</html>
+";
 
-if(!checkemail("$email")):
-        $error[]='Invalid email address.'; 
-endif;
+// Always set content-type when sending HTML email
+$headers = "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
 
-if(!checkmobile("$mobile")):
-        $error[]='Invalid Mobile Number.'; 
-endif;
-
-if($project_id == ""):
-    $error[]='Project ID or Name is Missing';     
-endif;
-
-
-if(isset($error)  &&  count($error) > 0  && $yn==0 ) {
-         $x=1;
-         echo "OOPS ! You have left the following mandatory fields:\n\n";
-	     foreach ($error as $v){
-	      echo "$x : $v\n";
-	      $x++;
-	     }      
-
-}else {
-
-$ip_address =  $_SERVER['REMOTE_ADDR'];
-$data=array(
-		'username' =>'kumayan',
-		'password' =>'kumayaN@#$2017',     	
-     	'name' =>$name,
-		'mobile' => $mobile,
-		'email' => $email,
-		'city' => $city,
-		'country' => $country,
-		'comments' => $comments,
-		'userid' => $userid,
-		'project_id' => $project_id,
-		'lead_source' => $lead_source,
-		'url' => $url,
-		'ip_address' => $ip_address,
-		'country_region' => $country_region,
-		'property_type' => $property_type,
-		'campaign_name' => $campaign_name,
-		'source_media' => $source_media,
-		'project_name' => $project_name,
-		'budget' => $budget);
-		
-$eurl = 'https://www.smcrealty.com/utils/api/NewCreate.php';		
-$ch = curl_init($eurl);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$response_json = curl_exec($ch);
-curl_close($ch);
-$response=json_decode($response_json, true);
-
-if($response[status] == 200):
-      echo '200';
-else: 
-    echo "$response[status_message]"; 
-endif; 
+// More headers
+$headers .= 'From: <no_reply@botmediadigital.com>' . "\r\n";
+$headers .= 'Cc: ' . "\r\n";
 
 
 
-} // end of if	
+if(mail($to,$subject,$message,$headers)) //Send an Email. Return true on success or false on error
 
 
-
-function checkemail($str) {
-         return (!preg_match("/^([a-z0-9\+_\-]+)(\.[a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[a-z]{2,6}$/ix", $str)) ? FALSE : TRUE;
+{
+echo "<script>window.location.href='thankuPage.html';</script>";
 }
+else
+{
+echo "<script>
+alert('Plz Try Agian');
+window.location.href='index.html'
 
-function checkmobile($mobile){
-    return preg_match('/^[0-9]{10}+$/', $mobile);
+;
+</script>";
 }
-
 ?>
