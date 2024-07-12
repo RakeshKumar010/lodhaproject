@@ -2,6 +2,8 @@
 $name =  $_POST['name'];
 $email =  $_POST['email'];
 $mobile=  $_POST['mobile'];
+$apartment=  $_POST['apartment'];
+$enquiryPurpose=  $_POST['enquiryPurpose'];
 $comments = (($_POST['message']) ? $_POST['message'] : '');
  
 
@@ -19,6 +21,8 @@ $message = "
 <tr>Name&#58; $name</tr>
 <tr>Email&#58; $email</tr>
 <tr>Mobile&#58; $mobile</tr>
+<tr>Apartment&#58; $apartment</tr>
+<tr>Purpose of Enquiry&#58; $enquiryPurpose</tr>
 <tr>Message&#58; $comments</tr>
  
 </table>
@@ -41,7 +45,7 @@ if(mail($to,$subject,$message,$headers)) //Send an Email. Return true on success
 
 {
     echo "<script>
- 
+  
     window.location.href='thankuPage.html'
     
     ;

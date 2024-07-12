@@ -1,7 +1,55 @@
 let sideBtnId = document.getElementById('sideBtnId')
 let offerId =document.getElementById('offerId')
 let body =document.getElementsByTagName('body')
+const popupFormMain =document.querySelector('.popup-form-main')
+const popupBrochureFormMain =document.querySelector('.popup-brochure-form-main')
+const closeiBtn =document.querySelector('#closeiBtn')
+const brochureCloseiBtn =document.querySelector('#brochureCloseiBtn')
+const offerEnquiry =document.querySelector('#offerEnquiry')
+const arrowBtn =document.querySelector('#arrowBtn')
+const formHeader =document.querySelector('#formHeader')
+const enquireFormRight =document.querySelector('#enquireFormRight')
+const rightSpecialOffer =document.querySelector('#rightSpecialOffer')
+// offerEnquiry.addEventListener('click',()=>{
+// })
+enquireFormRight.style.display='none'
+rightSpecialOffer.addEventListener('click',()=>{
+    if(enquireFormRight.style.display=='none'){
 
+        enquireFormRight.style.display='block'
+    }else{
+        enquireFormRight.style.display='none'
+
+    }
+})
+arrowBtn.addEventListener('click',()=>{
+    // alert('hi')
+    if (arrowBtn.style.transform=='') {
+    arrowBtn.style.transform='rotate(180deg)';
+    formHeader.style.display='block'
+        
+    }else{
+
+        arrowBtn.style.transform='';
+        formHeader.style.display='none'
+    }
+
+})
+const popupShow =()=>{
+    popupFormMain.style.display='flex'
+
+}
+const popupBrochureShow =()=>{
+    popupBrochureFormMain.style.display='flex'
+
+}
+
+closeiBtn.addEventListener('click',()=>{
+    popupFormMain.style.display='none'
+})
+brochureCloseiBtn.addEventListener('click',()=>{
+    popupBrochureFormMain.style.display='none'
+})
 sideBtnId.addEventListener('click',()=>{
     // offerId.style.display='block'
 
@@ -12,6 +60,11 @@ sideBtnId.addEventListener('click',()=>{
         offerId.style.display='block'
     }
 })
+
+
+setTimeout(() => {
+    offerEnquiry.click()
+}, 5000);
 
 
 const floorText=document.querySelectorAll('.floor-text')
@@ -54,9 +107,6 @@ const getstartId =document.getElementById('getstartId')
 
 
 
-setTimeout(() => {
-    getstartId.click()
-}, 5000);
 
  
  

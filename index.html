@@ -85,14 +85,7 @@
                   <li><a href="#pricing" class="scroll">Price</a></li>
                   <li><a href="#contact" class="scroll">Contact</a></li>
                   <li>
-                    <a
-                      href="javascript:void(0)"
-                      data-toggle="modal"
-                      data-target="#enquiry-form"
-                      id="getstartId"
-                      class="scroll"
-                      >Enquiry</a
-                    >
+                    <p class="getstartId" onclick="popupShow()">Enquiry</p>
                   </li>
                 </ul>
                 <div class="nav-btn">
@@ -113,7 +106,7 @@
               <div class="container">
                 <!--end form-hero-->
 
-                <div class="scroll-down">
+                <div class="scroll-down" id="scrollBtnMain">
                   <a href="#page-down" class="arrow-up scroll">
                     <img src="img/scroll-down.png" />
                   </a>
@@ -152,6 +145,92 @@
                 <img src="img/banner-44.jpg" alt="" />
               </div>
             </div>
+          </div>
+          <div class="header-form-container">
+            <ul
+              style="
+                list-style: none;
+                margin: 0;
+                text-wrap: nowrap;
+                margin-bottom: 20px;
+              "
+            >
+              <li>✅ Starting From 65.99 Lac* Onwards</li>
+              <li>✅ Pre-launch Discount up to RS 5 Lac*</li>
+              <li>✅ Stamp Duty Offer</li>
+            </ul>
+            <div class="arrow-btn-main">
+              <i class="fa fa-chevron-up" id="arrowBtn"></i>
+            </div>
+            <form
+              id="formHeader"
+              action="post.php"
+              class="contct-us-forma-container"
+              method="post"
+            >
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Name*"
+                  required
+                  type="text"
+                  name="name"
+                />
+              </div>
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Email*"
+                  required
+                  type="email"
+                  name="email"
+                />
+              </div>
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Number*"
+                  required
+                  type="text"
+                  name="mobile"
+                />
+              </div>
+              <div class="input-container">
+                <select name="apartment" id="apartment">
+                  <option value="">Apartment Interested In*</option>
+                  <option value="2 BHK with deck">2 BHK with deck</option>
+                  <option value="2 BHK Ultima with Deck">
+                    2 BHK Ultima with Deck
+                  </option>
+                  <option value="3 BHK OPTIMA">3 BHK Optima</option>
+                  <option
+                    value="3 BHK Ultima
+                  "
+                  >
+                    3 BHK Ultima
+                  </option>
+                  <option
+                    value="Other
+                  "
+                  >
+                    Other
+                  </option>
+                </select>
+              </div>
+              <div class="input-container">
+                <select name="enquiryPurpose" id="enquiryPurpose">
+                  <option value="">Purpose of Enquiry*</option>
+                  <option value="Schedule a Phone Call">
+                    Schedule a Phone Call
+                  </option>
+                  <option value="Schedule a Video Call">
+                    Schedule a Video Call
+                  </option>
+                  <option value="Schedule a Site Visit">
+                    Schedule a Site Visit
+                  </option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <button type="submit" class="popup-btn">ENQUIRE NOW</button>
+            </form>
           </div>
           <!--end owl-carousel-->
         </div>
@@ -275,13 +354,12 @@
                   <li>Premium Finishes Home with Large Sundecks</li>
                 </ul>
                 <!--end ul-->
-                <a
-                  href="javascript:void(0)"
-                  data-toggle="modal"
-                  data-target="#downloadpdf"
+                <p
+                  onclick="popupBrochureShow()"
                   class="btn btn-rounded btn-primary arrow"
-                  >Download Brochure</a
                 >
+                  Download Brochure
+                </p>
               </div>
               <!--end col-md-6-->
               <div
@@ -584,12 +662,7 @@
                   <div class="row">
                     <div class="col-md-8">
                       <div class="site-img">
-                        <img
-                          src="img/2bhk.jpg"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
-                          alt=""
-                        />
+                        <img src="img/2bhk.jpg" onclick="popupShow()" alt="" />
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -597,13 +670,12 @@
                         <h3>Floor Plan Details</h3>
 
                         <br />
-                        <a
-                          href="javascript:void(0)"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
+                        <p
+                          onclick="popupShow()"
                           class="btn btn-rounded btn-primary hover-effect arrow"
-                          >Enquire for More Details</a
                         >
+                          Enquire for More Details
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -612,12 +684,7 @@
                   <div class="row">
                     <div class="col-md-8">
                       <div class="site-img">
-                        <img
-                          src="img/4BHK.jpg"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
-                          alt=""
-                        />
+                        <img src="img/4BHK.jpg" onclick="popupShow()" alt="" />
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -625,13 +692,12 @@
                         <h3>Floor Plan Details</h3>
 
                         <br />
-                        <a
-                          href="javascript:void(0)"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
+                        <p
+                          onclick="popupShow()"
                           class="btn btn-rounded btn-primary hover-effect arrow"
-                          >Enquire for More Details</a
                         >
+                          Enquire for More Details
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -644,12 +710,7 @@
                   <div class="row">
                     <div class="col-md-8">
                       <div class="site-img">
-                        <img
-                          src="img/3BHK.jpg"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
-                          alt=""
-                        />
+                        <img src="img/3BHK.jpg" onclick="popupShow()" alt="" />
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -657,13 +718,12 @@
                         <h3>Floor Plan Details</h3>
 
                         <br />
-                        <a
-                          href="javascript:void(0)"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
+                        <p
+                          onclick="popupShow()"
                           class="btn btn-rounded btn-primary hover-effect arrow"
-                          >Enquire for More Details</a
                         >
+                          Enquire for More Details
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -673,12 +733,7 @@
                   <div class="row">
                     <div class="col-md-8">
                       <div class="site-img">
-                        <img
-                          src="img/4BHK.jpg"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
-                          alt=""
-                        />
+                        <img src="img/4BHK.jpg" onclick="popupShow()" alt="" />
                       </div>
                     </div>
                     <div class="col-md-4">
@@ -686,13 +741,12 @@
                         <h3>Location Map Details</h3>
 
                         <br />
-                        <a
-                          href="javascript:void(0)"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
+                        <p
+                          onclick="popupShow()"
                           class="btn btn-rounded btn-primary hover-effect arrow"
-                          >Enquire for More Details</a
                         >
+                          Enquire for More Details
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -708,8 +762,7 @@
                       <div class="site-img">
                         <img
                           src="img/master-plan.jpg"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
+                          onclick="popupShow()"
                           alt=""
                         />
                       </div>
@@ -719,13 +772,12 @@
                         <h3>Master Plan Details</h3>
 
                         <br />
-                        <a
-                          href="javascript:void(0)"
-                          data-toggle="modal"
-                          data-target="#enquiry-form"
+                        <p
+                          onclick="popupShow()"
                           class="btn btn-rounded btn-primary hover-effect arrow"
-                          >Enquire for More Details</a
                         >
+                          Enquire for More Details
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -753,8 +805,8 @@
                     role="tab"
                     data-toggle="tab"
                     class="floor-text active"
-                    >3 BHK</a
-                  >
+                    >3 BHK OPTIMA
+                  </a>
                   <a
                     href="#modal-masterplan"
                     aria-controls="modal-masterplan"
@@ -919,21 +971,19 @@
                     <div class="values">
                       <figure>572 Sq.ft.</figure>
                     </div>
-                    <a
-                      href="#"
+                    <p
+                      onclick="popupShow()"
                       class="btn btn-rounded btn-framed btn-light-frame btn-primary"
-                      data-toggle="modal"
-                      data-target="#enquiry-form"
-                      >Apartment Details</a
                     >
+                      Apartment Details
+                    </p>
                     <div class="price-box-footer">
-                      <a
-                        href="javascript:void(0)"
-                        data-toggle="modal"
-                        data-target="#enquiry-form"
+                      <p
+                        onclick="popupShow()"
                         class="btn btn-rounded btn-primary"
-                        >Contact us</a
                       >
+                        Contact us
+                      </p>
                     </div>
                   </div>
                   <!--end price-box-->
@@ -950,21 +1000,19 @@
                     <div class="values">
                       <figure>656 SQ.FT.</figure>
                     </div>
-                    <a
-                      href="#"
+                    <p
                       class="btn btn-rounded btn-framed btn-light-frame btn-primary"
-                      data-toggle="modal"
-                      data-target="#enquiry-form"
-                      >Apartment Details</a
+                      onclick="popupShow()"
                     >
+                      Apartment Details
+                    </p>
                     <div class="price-box-footer">
-                      <a
-                        href="javascript:void(0)"
-                        data-toggle="modal"
-                        data-target="#enquiry-form"
+                      <p
+                        onclick="popupShow()"
                         class="btn btn-rounded btn-primary"
-                        >Contact us</a
                       >
+                        Contact us
+                      </p>
                     </div>
                   </div>
                   <!--end price-box-->
@@ -983,21 +1031,19 @@
                     <div class="values">
                       <figure>759 SQ.FT.</figure>
                     </div>
-                    <a
-                      href="#"
+                    <p
+                      onclick="popupShow()"
                       class="btn btn-rounded btn-framed btn-light-frame btn-primary"
-                      data-toggle="modal"
-                      data-target="#enquiry-form"
-                      >Apartment Details</a
                     >
+                      Apartment Details
+                    </p>
                     <div class="price-box-footer">
-                      <a
-                        href="javascript:void(0)"
-                        data-toggle="modal"
-                        data-target="#enquiry-form"
+                      <p
+                        onclick="popupShow()"
                         class="btn btn-rounded btn-primary"
-                        >Contact us</a
                       >
+                        Contact us
+                      </p>
                     </div>
                   </div>
                   <!--end price-box-->
@@ -1013,21 +1059,19 @@
                     <div class="values">
                       <figure>960 Sq.ft.</figure>
                     </div>
-                    <a
-                      href="#"
+                    <p
                       class="btn btn-rounded btn-framed btn-light-frame btn-primary"
-                      data-toggle="modal"
-                      data-target="#enquiry-form"
-                      >Apartment Details</a
+                      onclick="popupShow()"
                     >
+                      Apartment Details
+                    </p>
                     <div class="price-box-footer">
-                      <a
-                        href="javascript:void(0)"
-                        data-toggle="modal"
-                        data-target="#enquiry-form"
+                      <p
+                        onclick="popupShow()"
                         class="btn btn-rounded btn-primary"
-                        >Contact us</a
                       >
+                        Contact us
+                      </p>
                     </div>
                   </div>
                   <!--end price-box-->
@@ -1215,7 +1259,6 @@
           </div>
           <!--end container-->
         </div>
-
         <div class="block" id="contact">
           <div class="container">
             <h2>Contact.</h2>
@@ -1237,672 +1280,779 @@
                     ></iframe>
                   </div>
                 </div>
-
-                <div
-                  class="col-md-12 col-sm-12"
-                  data-scroll-reveal="enter top and move 20px"
-                >
-                  <div class="contact framed">
-                    <div class="row">
-                      <div class="col-md-5 col-sm-5">
-                        <div class="person">
-                          <div class="row">
-                            <div class="col-md-5 col-sm-5">
-                              <div class="image">
-                                <img src="img/logo.jpg" alt="" />
-                              </div>
-                            </div>
-                            <div class="col-md-7 col-sm-7">
-                              <div class="contact-data">
-                                <figure>+91 8448512324</figure>
-                                <a href="#" class="underline"
-                                  >botmediadigitalmarketing@gmail.com</a
-                                >
-                              </div>
-                              <!--end contact-data-->
-                              <hr />
-                              <div class="social">
-                                <a href="#" style="display: table"
-                                  ><i class="social_facebook_circle"></i
-                                  >Facebook</a
-                                >
-                                <a href="#" style="display: table"
-                                  ><i class="social_twitter_circle"></i
-                                  >Twitter</a
-                                >
-                                <a href="#" style="display: table"
-                                  ><i class="social_youtube_circle"></i
-                                  >youtube</a
-                                >
-                                <a href="#" style="display: table"
-                                  ><i class="social_linkedin_circle"></i
-                                  >Linkedin</a
-                                >
-                              </div>
-                              <!--end social-->
-                            </div>
-                            <!--end col-md-7-->
-                          </div>
-                          <!--end row-->
-                        </div>
-                        <!--end person-->
-                      </div>
-                      <!--end col-md-5-->
-                      <div class="col-md-7 col-sm-7">
-                        <form action="post.php" method="post">
-                          <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                              <div class="form-group">
-                                <input
-                                  type="text"
-                                  class="form-control"
-                                  id="form-contact-agent-name"
-                                  name="name"
-                                  placeholder="Your Name"
-                                  required
-                                />
-                              </div>
-                              <!--end form-group -->
-                            </div>
-                            <!--end col-md-6 col-sm-6 -->
-                            <div class="col-md-6 col-sm-6">
-                              <div class="form-group">
-                                <input
-                                  type="email"
-                                  class="form-control"
-                                  id="form-contact-agent-email"
-                                  name="email"
-                                  placeholder="Your Email"
-                                  required
-                                />
-                              </div>
-                              <!--end form-group -->
-                            </div>
-                            <!--end col-md-6 col-sm-6 -->
-                          </div>
-                          <!--end row -->
-                          <div class="row">
-                            <div class="col-md-12">
-                              <div class="form-group">
-                                <textarea
-                                  class="form-control"
-                                  id="form-contact-agent-message"
-                                  rows="6"
-                                  name="message"
-                                  placeholder="Your Message"
-                                  required
-                                ></textarea>
-                              </div>
-                              <!--end form-group -->
-                            </div>
-                            <!--end col-md-12 -->
-                          </div>
-                          <!--end row -->
-                          <div class="form-group clearfix">
-                            <button
-                              type="submit"
-                              class="btn pull-right btn-primary btn-rounded"
-                              id="form-contact-agent-submit"
-                            >
-                              Send a Message
-                            </button>
-                          </div>
-                          <!--end form-group -->
-                          <div id="form-contact-agent-status"></div>
-                        </form>
-                        <!--end form-contact -->
-                      </div>
-                      <!--end col-md-7-->
-                    </div>
-                    <!--end row-->
-                  </div>
-                  <!--end contact-->
-                </div>
-                <!--end col-md-6-->
               </div>
-              <!--end row-->
             </div>
-            <!--end contact map-->
           </div>
-          <!--end container-->
         </div>
-        <!--end block-->
 
-        <!--end page-content-->
-
-        <footer id="page-footer" class="block background-is-dark">
+        <div class="block" id="contact">
           <div class="container">
-            <a href="#" class="brand"
-              ><img src="img/logo-white.png" alt=""
-            /></a>
-            <!--end brand-->
-            <div class="row">
-              <div class="col-md-6 col-sm-6">
-                <p>
-                  <b>SITE ADDRESS:</b> Casa Premier,  Manpada, Dombivli
-                  East, Dombivli, Maharashtra 421203
-                </p>
-                <div>
-                  <img src="img/qrcode.jpg" id="footerQr" alt="" />
+            <div class="contact map">
+              <div class="row">
+                <div class="contact-us-container">
+                  <div class="contact-us-left">
+                    <div class="res-img-text-container">
+                      <img src="img/logo.jpg" class="contact-us-logo" alt="" />
+                      <div class="res-text-contant">
+                        <p>+91 8448512324</p>
+                        <p>Sales@townshipproject.com</p>
+                      </div>
+                    </div>
+                    <div>
+                      <div>
+                        <div class="text-contant">
+                          <p>+91 8448512324</p>
+                          <p>Sales@townshipproject.com</p>
+                        </div>
+                        <hr />
+                        <div class="social">
+                          <a href="#" style="display: table"
+                            ><i class="social_facebook_circle"></i>Facebook</a
+                          >
+                          <a href="#" style="display: table"
+                            ><i class="social_twitter_circle"></i>Twitter</a
+                          >
+                          <a href="#" style="display: table"
+                            ><i class="social_youtube_circle"></i>youtube</a
+                          >
+                          <a href="#" style="display: table"
+                            ><i class="social_linkedin_circle"></i>Linkedin</a
+                          >
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="popup-from-main">
+                    <form
+                      action="post.php"
+                      class="contct-us-forma-container"
+                      method="post"
+                    >
+                      <div class="input-container">
+                        <input
+                          placeholder="Enter the Name*"
+                          required
+                          type="text"
+                          name="name"
+                        />
+                      </div>
+                      <div class="input-container">
+                        <input
+                          placeholder="Enter the Email*"
+                          required
+                          type="email"
+                          name="email"
+                        />
+                      </div>
+                      <div class="input-container">
+                        <input
+                          placeholder="Enter the Number*"
+                          required
+                          type="text"
+                          name="mobile"
+                        />
+                      </div>
+                      <div class="input-container">
+                        <textarea
+                          style="width: 100%"
+                          name="message"
+                          placeholder="Your Message"
+                          rows="5"
+                        ></textarea>
+                      </div>
+                      <button type="submit" class="popup-btn">Submit</button>
+                    </form>
+                  </div>
                 </div>
-                <p>
-                  <b>RERA No: </b> P51700046311, P51700052333 | Available at
-                  site
-                  <a
-                    href="https://maharera.mahaonline.gov.in/"
-                    target="_blank"
-                    class="blue-text"
-                    >https://maharera.mahaonline.gov.in</a
-                  >
-                </p>
               </div>
-              <!--end col-md-4-->
-              <div class="col-md-6 col-sm-6">
-                <div
-                  class="contact-data text-align-right"
-                  style="font-size: 20px; font-weight: 600; text-wrap: nowrap"
+            </div>
+          </div>
+          <!--end contact map-->
+        </div>
+        <!--end container-->
+      </div>
+      <!--end block-->
+
+      <!--end page-content-->
+
+      <footer id="page-footer" class="block background-is-dark">
+        <div class="container">
+          <a href="#" class="brand"><img src="img/logo-white.png" alt="" /></a>
+          <!--end brand-->
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <p>
+                <b>SITE ADDRESS:</b> Casa Premier, Manpada, Dombivli East,
+                Dombivli, Maharashtra 421203
+              </p>
+              <div>
+                <img src="img/qrcode.jpg" id="footerQr" alt="" />
+              </div>
+              <p>
+                <b>RERA No: </b> P51700046311, P51700052333 | Available at site
+                <a
+                  href="https://maharera.mahaonline.gov.in/"
+                  target="_blank"
+                  class="blue-text"
+                  >https://maharera.mahaonline.gov.in</a
                 >
-                  <a href="tel:+918448512324"
-                    ><i class="fa fa-phone"></i> +918448512324</a
-                  >
-                </div>
+              </p>
+            </div>
+            <!--end col-md-4-->
+            <div class="col-md-6 col-sm-6">
+              <div
+                class="contact-data text-align-right"
+                style="font-size: 20px; font-weight: 600; text-wrap: nowrap"
+              >
+                <a href="tel:+918448512324"
+                  ><i class="fa fa-phone"></i> +918448512324</a
+                >
               </div>
-              <!--end col-md-8-->
             </div>
-            <!--end row-->
-            <hr />
-            <div class="note">
-              <a target="_blank" href="privacy-policy.html"> Privacy Policy</a>
-              &
-              <a target="_blank" href="terms-conditions.html"
-                >Terms & Condition</a
-              >: The content is for information purposes only and does not
-              constitute an offer to avail of any service. Prices mentioned are
-              subject to change without notice and properties mentioned are
-              subject to availability. Images for representation purpose only,
-              Website maintained by our online marketing agency partners. We may
-              also send updates to the mobile number/email id registered with
-              us. All Rights Reserved.
-            </div>
-            <!--end note-->
-            <div class="to-top">
-              <a href="#page-top" class="arrow-up framed scroll">
-                <i class="arrow_up"></i>
-              </a>
-            </div>
+            <!--end col-md-8-->
           </div>
-          <!--end container-->
-          <div class="background-wrapper">
-            <div class="bg-transfer opacity-10">
-              <img src="img/footer-bg.jpg" alt="" />
-            </div>
-            <div class="background-color background-color-black"></div>
+          <!--end row-->
+          <hr />
+          <div class="note">
+            <a target="_blank" href="privacy-policy.html"> Privacy Policy</a>
+            &
+            <a target="_blank" href="terms-conditions.html">Terms & Condition</a
+            >: The content is for information purposes only and does not
+            constitute an offer to avail of any service. Prices mentioned are
+            subject to change without notice and properties mentioned are
+            subject to availability. Images for representation purpose only,
+            Website maintained by our online marketing agency partners. We may
+            also send updates to the mobile number/email id registered with us.
+            All Rights Reserved.
           </div>
-          <!--end background-wrapper-->
-        </footer>
-        <!--end page-footer-->
-      </div>
-      <!--end page-wrapper-->
-
-      <div
-        class="modal fade apartment-selector"
-        id="enquiry-form"
-        tabindex="-1"
-        role="dialog"
-      >
-        <div class="modal-dialog" role="document">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <i class="icon_close"></i>
-          </button>
-          <div class="modal-content">
-            <div class="modal-header">
-              <div class="title">
-                <h3>Contact Us For</h3>
-                <h1 class="modal-title">Lodha Premier, Dombivali Mumbai</h1>
-              </div>
-            </div>
-            <!--end modal-header-->
-            <div class="modal-body">
-              <div class="left">
-                <img src="img/3.jpg" alt="" />
-              </div>
-              <!--end left-->
-              <div class="right">
-                <h3>Enquire Now</h3>
-                <form action="post.php" method="post">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          placeholder="Name*"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          name="mobile"
-                          id="mobile"
-                          placeholder="Mobile*"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          name="email"
-                          id="email"
-                          placeholder="Email*"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="text-right">
-                    <span id="popupresponse"></span>
-                    <button
-                      type="submit"
-                      class="btn btn-rounded btn-primary arrow"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <!--end right-->
-            </div>
-            <!--end modal-body-->
+          <!--end note-->
+          <div class="to-top">
+            <a href="#page-top" class="arrow-up framed scroll">
+              <i class="arrow_up"></i>
+            </a>
           </div>
-          <!--end modal-content-->
         </div>
-        <!--end modal-dialog-->
-      </div>
-      <!--end modal-->
-
-      <div
-        class="modal fade apartment-selector"
-        id="downloadpdf"
-        tabindex="-1"
-        role="dialog"
-      >
-        <div class="modal-dialog" role="document">
-          <button
-            type="button"
-            class="close"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <i class="icon_close"></i>
-          </button>
-          <div class="modal-content">
-            <div class="modal-header">
-              <div class="title">
-                <h3>Lodha Premier, Dombivali Mumbai</h3>
-                <h1 class="modal-title">Contact for the Brochure</h1>
-              </div>
-            </div>
-            <!--end modal-header-->
-            <div class="modal-body">
-              <div class="left">
-                <img src="img/3.jpg" alt="" />
-
-                <!--end tab-content-->
-              </div>
-              <!--end left-->
-              <div class="right">
-                <h3>Enquire Now</h3>
-                <form action="post.php" method="post">
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          placeholder="Name*"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          name="mobile"
-                          id="mobile"
-                          placeholder="Mobile*"
-                        />
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <input
-                          type="text"
-                          name="email"
-                          id="email"
-                          placeholder="Email*"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div class="text-right">
-                    <span id="downloadresponse"></span>
-                    <button
-                      type="submit"
-                      class="btn btn-rounded btn-primary arrow"
-                    >
-                      Submit
-                    </button>
-                  </div>
-                </form>
-              </div>
-              <!--end right-->
-            </div>
-            <!--end modal-body-->
+        <!--end container-->
+        <div class="background-wrapper">
+          <div class="bg-transfer opacity-10">
+            <img src="img/footer-bg.jpg" alt="" />
           </div>
-          <!--end modal-content-->
+          <div class="background-color background-color-black"></div>
         </div>
-        <!--end modal-dialog-->
-      </div>
-      <!--end modal-->
-      <div class="side-btn-main" id="sideBtnId">
-        <!-- <img src="./img/offerbtn.png" class="side-btn-img" alt="" /> -->
-        <p class="special-offer">Special Offer</p>
-        <div class="offer-slide" id="offerId">
-          <ul
-            style="
-              list-style: none;
-              margin: 0;
-              text-wrap: nowrap;
-              margin-bottom: 20px;
-            "
-          >
-            <li>✅ Starting From 65.99 Lac* Onwards</li>
-            <li>✅ Pre-launch Discount up to RS 5 Lac*</li>
-            <li>✅ Stamp Duty Offer</li>
-          </ul>
-          <a
-            href="javascript:void(0)"
-            data-toggle="modal"
-            data-target="#enquiry-form"
-            class="btn btn-rounded btn-primary hover-effect arrow"
-          >
-            Offer Enquiry</a
-          >
-        </div>
-      </div>
-
-      <div id="popUpMain" style="display: none">
-        <div class="offer-card">
-          <p>Offer</p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-            mollitia earum expedita ipsum nostrum totam maxime quisquam
-            dignissimos, laboriosam possimus, cumque tenetur, consectetur id!
-            Tempore quae delectus tempora error iusto?
-          </p>
-        </div>
-      </div>
-      <!--end outer-wrapper-->
-      <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
-      <script
-        type="text/javascript"
-        src="js/jquery-migrate-1.2.1.min.js"
-      ></script>
-      <script
-        type="text/javascript"
-        src="bootstrap/js/bootstrap.min.js"
-      ></script>
-      <script type="text/javascript" src="js/jquery.validate.min.js"></script>
-      <script type="text/javascript" src="js/owl.carousel.min.js"></script>
-      <script
-        type="text/javascript"
-        src="js/jquery.magnific-popup.min.js"
-      ></script>
-      <script type="text/javascript" src="js/scrollReveal.min.js"></script>
-      <script type="text/javascript" src="js/readmore.min.js"></script>
-      <script type="text/javascript" src="js/pace.min.js"></script>
-      <script type="text/javascript" src="js/custom.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
-      <script src="/js/new.js"></script>
-      <!-- <script>
-        $("#topform").validate({
-          rules: {
-            name: "required",
-
-            mobile: {
-              required: true,
-              number: true,
-              minlength: 10,
-              maxlength: 10,
-            },
-          },
-
-          messages: {
-            name: "Your name",
-            mobile: {
-              required: "Mobile number",
-              number: "Invalid Mobile Number",
-            },
-            email: {
-              required: "Enter Email",
-              email: "Invalid Email",
-            },
-          },
-          submitHandler: function (form1) {
-            $.ajax({
-              type: "POST",
-              url: "post.php",
-              data: $(topform).serialize(),
-              beforeSend: function () {
-                $("#response").show();
-                $("#response").html("<img src='img/loading.gif' />");
-              },
-              success: function (data) {
-                if (data == 200) {
-                  $("#name").val("");
-                  $("#email").val("");
-                  $("#mobile").val("");
-                  $("#agree").val("");
-                  window.setTimeout(function () {
-                    window.location.href = "action.php";
-                  }, 100);
-                } else {
-                  alert(data);
-                  $("#response").hide();
-                }
-              },
-            });
-            return false; // required to block normal submit since you used ajax
-          },
-        });
-
-        $("#bottomform").validate({
-          rules: {
-            name: "required",
-
-            mobile: {
-              required: true,
-              number: true,
-              minlength: 10,
-              maxlength: 10,
-            },
-            email: {
-              required: true,
-              email: true,
-            },
-            message: { required: true },
-
-            agree: { required: true },
-          },
-
-          messages: {
-            name: "Your name",
-            mobile: {
-              required: "Mobile number",
-              number: "Invalid Mobile Number",
-            },
-            email: {
-              required: "Enter Email",
-              email: "Invalid Email",
-            },
-            message: { required: "Message : Let us know about your Budget" },
-            agree: {
-              required:
-                "I authorize the marketing partner to call me between 9 AM to 9 PM, to provide details of the project.",
-            },
-          },
-          submitHandler: function (bottomform) {
-            $.ajax({
-              type: "POST",
-              url: "post.php",
-              data: $(bottomform).serialize(),
-              beforeSend: function () {
-                $("#bottresponse").show();
-                $("#bottresponse").html("<img src='img/loading.gif' />");
-              },
-              success: function (data) {
-                if (data == 200) {
-                  $("#name").val("");
-                  $("#email").val("");
-                  $("#mobile").val("");
-                  $("#agree").val("");
-                  window.setTimeout(function () {
-                    window.location.href = "action.php";
-                  }, 100);
-                } else {
-                  alert(data);
-                  $("#bottresponse").hide();
-                }
-              },
-            });
-            return false; // required to block normal submit since you used ajax
-          },
-        });
-
-        ///////////////// end bottom form////////////////////////
-
-        ///////////////////////////////bottom form start ///////////////
-        $("#popupform").validate({
-          rules: {
-            name: "required",
-
-            mobile: {
-              required: true,
-              number: true,
-              minlength: 10,
-              maxlength: 10,
-            },
-            email: {
-              required: true,
-              email: true,
-            },
-          },
-
-          messages: {
-            name: "Your name",
-            mobile: {
-              required: "Mobile number",
-              number: "Invalid Mobile Number",
-            },
-            email: {
-              required: "Enter Email",
-              email: "Invalid Email",
-            },
-          },
-          submitHandler: function (popupform) {
-            $.ajax({
-              type: "POST",
-              url: "post.php",
-              data: $(popupform).serialize(),
-              beforeSend: function () {
-                $("#popupresponse").show();
-                $("#popupresponse").html("<img src='img/loading.gif' />");
-              },
-              success: function (data) {
-                if (data == 200) {
-                  $("#name").val("");
-                  $("#email").val("");
-                  $("#mobile").val("");
-                  window.setTimeout(function () {
-                    window.location.href = "action.php";
-                  }, 100);
-                } else {
-                  alert(data);
-                  $("#popupresponse").hide();
-                }
-              },
-            });
-            return false; // required to block normal submit since you used ajax
-          },
-        });
-
-        ///////////////// end bottom form////////////////////////
-
-        ///////////////////////////////download pdf form start ///////////////
-        $("#downloadform").validate({
-          rules: {
-            name: "required",
-
-            mobile: {
-              required: true,
-              number: true,
-              minlength: 10,
-              maxlength: 10,
-            },
-            email: {
-              required: true,
-              email: true,
-            },
-          },
-
-          messages: {
-            name: "Your name",
-            mobile: {
-              required: "Mobile number",
-              number: "Invalid Mobile Number",
-            },
-            email: {
-              required: "Enter Email",
-              email: "Invalid Email",
-            },
-          },
-          submitHandler: function (downloadform) {
-            $.ajax({
-              type: "POST",
-              url: "post.php",
-              data: $(downloadform).serialize(),
-              beforeSend: function () {
-                $("#downloadresponse").show();
-                $("#downloadresponse").html("<img src='img/loading.gif' />");
-              },
-              success: function (data) {
-                if (data == 200) {
-                  $("#name").val("");
-                  $("#email").val("");
-                  $("#mobile").val("");
-                  window.setTimeout(function () {
-                    window.location.href = "download.php";
-                  }, 100);
-                } else {
-                  alert(data);
-                  $("#downloadresponse").hide();
-                }
-              },
-            });
-            return false; // required to block normal submit since you used ajax
-          },
-        });
-        ///////////////// download pdf form////////////////////////
-      </script> -->
+        <!--end background-wrapper-->
+      </footer>
+      <!--end page-footer-->
     </div>
+    <!--end page-wrapper-->
+
+    <div
+      class="modal fade apartment-selector"
+      id="enquiry-form"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <i class="icon_close"></i>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="title">
+              <h3>Contact Us For</h3>
+              <h1 class="modal-title">Lodha Premier, Dombivali Mumbai</h1>
+            </div>
+          </div>
+          <!--end modal-header-->
+          <div class="modal-body">
+            <div class="left">
+              <img src="img/3.jpg" alt="" />
+            </div>
+            <!--end left-->
+            <div class="right">
+              <h3>Enquire Now</h3>
+              <form id="popupform" name="popupform" method="POST" role="form">
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Name*"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="mobile"
+                        id="mobile"
+                        placeholder="Mobile*"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Email*"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span id="popupresponse"></span>
+                  <button
+                    type="submit"
+                    class="btn btn-rounded btn-primary arrow"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!--end right-->
+          </div>
+          <!--end modal-body-->
+        </div>
+        <!--end modal-content-->
+      </div>
+      <!--end modal-dialog-->
+    </div>
+    <!--end modal-->
+
+    <div
+      class="modal fade apartment-selector"
+      id="downloadpdf"
+      tabindex="-1"
+      role="dialog"
+    >
+      <div class="modal-dialog" role="document">
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <i class="icon_close"></i>
+        </button>
+        <div class="modal-content">
+          <div class="modal-header">
+            <div class="title">
+              <h3>Lodha Premier, Dombivali Mumbai</h3>
+              <h1 class="modal-title">Contact for the Brochure</h1>
+            </div>
+          </div>
+          <!--end modal-header-->
+          <div class="modal-body">
+            <div class="left">
+              <img src="img/3.jpg" alt="" />
+
+              <!--end tab-content-->
+            </div>
+            <!--end left-->
+            <div class="right">
+              <h3>Enquire Now</h3>
+              <form
+                id="downloadform"
+                name="downloadform"
+                method="POST"
+                role="form"
+              >
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="name"
+                        id="name"
+                        placeholder="Name*"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="mobile"
+                        id="mobile"
+                        placeholder="Mobile*"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        placeholder="Email*"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="text-right">
+                  <span id="downloadresponse"></span>
+                  <button
+                    type="submit"
+                    class="btn btn-rounded btn-primary arrow"
+                  >
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!--end right-->
+          </div>
+          <!--end modal-body-->
+        </div>
+        <!--end modal-content-->
+      </div>
+      <!--end modal-dialog-->
+    </div>
+    <!--end modal-->
+    <div class="side-btn-main" id="sideBtnId">
+      <!-- <img src="./img/offerbtn.png" class="side-btn-img" alt="" /> -->
+      <p class="special-offer">Special Offer</p>
+      <div class="offer-slide" id="offerId">
+        <ul
+          style="
+            list-style: none;
+            margin: 0;
+            text-wrap: nowrap;
+            margin-bottom: 20px;
+          "
+        >
+          <li>✅ Starting From 65.99 Lac* Onwards</li>
+          <li>✅ Pre-launch Discount up to RS 5 Lac*</li>
+          <li>✅ Stamp Duty Offer</li>
+        </ul>
+        <p
+          class="btn btn-rounded btn-primary hover-effect arrow"
+          onclick="popupShow()"
+        >
+          Offer Enquiry
+        </p>
+      </div>
+    </div>
+    <div class="right-side-btn-main" id="rightSideBtnId">
+      <!-- <img src="./img/offerbtn.png" class="side-btn-img" alt="" /> -->
+      <div class="enuire-slide" id="enquireId">
+        <form
+          action="post.php"
+          class="right-form-container"
+          method="post"
+          id="enquireFormRight"
+        >
+          <div class="input-container">
+            <input
+              placeholder="Enter the Name*"
+              required
+              type="text"
+              name="name"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              placeholder="Enter the Email*"
+              required
+              type="email"
+              name="email"
+            />
+          </div>
+          <div class="input-container">
+            <input
+              placeholder="Enter the Number*"
+              required
+              type="text"
+              name="mobile"
+            />
+          </div>
+          <div class="input-container">
+            <select required style="border-color: rgb(191, 190, 190);" name="apartment" id="apartment">
+              <option value="">Apartment Interested In*</option>
+              <option value="2 BHK with deck">2 BHK with deck</option>
+              <option value="2 BHK Ultima with Deck">
+                2 BHK Ultima with Deck
+              </option>
+              <option value="3 BHK OPTIMA">3 BHK Optima</option>
+              <option
+                value="3 BHK Ultima
+            "
+              >
+                3 BHK Ultima
+              </option>
+              <option
+                value="Other
+            "
+              >
+                Other
+              </option>
+            </select>
+          </div>
+          <div class="input-container">
+            <select required style="border-color: rgb(191, 190, 190);" name="enquiryPurpose" id="enquiryPurpose">
+              <option value="">Purpose of Enquiry*</option>
+              <option value="Schedule a Phone Call">
+                Schedule a Phone Call
+              </option>
+              <option value="Schedule a Video Call">
+                Schedule a Video Call
+              </option>
+              <option value="Schedule a Site Visit">
+                Schedule a Site Visit
+              </option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+          <button type="submit"  class=" popup-btn ">ENQUIRE NOW</button>
+        </form>
+      </div>
+      <p class="right-special-offer" id="rightSpecialOffer">Enquire Now</p>
+    </div>
+
+    <div class="popup-form-main">
+      <div class="popup-form">
+        <i class="fa fa-times" id="closeiBtn"></i>
+        <div>
+          <p class="popup-mini-heading">Contact Us</p>
+          <p class="popup-heading">Lodha Premier, Dombivali Mumbai</p>
+        </div>
+        <div class="popup-form-inner-container">
+          <img src="img/3.jpg" alt="" />
+
+          <div class="popup-from-main">
+            <form action="post.php" method="post">
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Name*"
+                  required
+                  type="text"
+                  name="name"
+                />
+              </div>
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Email*"
+                  required
+                  type="email"
+                  name="email"
+                />
+              </div>
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Number*"
+                  required
+                  type="text"
+                  name="mobile"
+                />
+              </div>
+              <button type="submit" class="popup-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-brochure-form-main">
+      <div class="popup-form">
+        <i class="fa fa-times" id="brochureCloseiBtn"></i>
+        <div>
+          <p class="popup-mini-heading">Contact for the Brochure</p>
+          <p class="popup-heading">Lodha Premier, Dombivali Mumbai</p>
+        </div>
+        <div class="popup-form-inner-container">
+          <img src="img/3.jpg" alt="" />
+
+          <div class="popup-from-main">
+            <form action="brochure.php" method="post">
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Name*"
+                  required
+                  type="text"
+                  name="name"
+                />
+              </div>
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Email*"
+                  required
+                  type="email"
+                  name="email"
+                />
+              </div>
+              <div class="input-container">
+                <input
+                  placeholder="Enter the Number*"
+                  required
+                  type="text"
+                  name="mobile"
+                />
+              </div>
+              <button type="submit" class="popup-btn">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--end outer-wrapper-->
+    <script type="text/javascript" src="js/jquery-2.2.1.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery-migrate-1.2.1.min.js"
+    ></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+    <script
+      type="text/javascript"
+      src="js/jquery.magnific-popup.min.js"
+    ></script>
+    <script type="text/javascript" src="js/scrollReveal.min.js"></script>
+    <script type="text/javascript" src="js/readmore.min.js"></script>
+    <script type="text/javascript" src="js/pace.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.js"></script>
+    <script src="/js/new.js"></script>
+    <script>
+      $("#topform").validate({
+        rules: {
+          name: "required",
+
+          mobile: {
+            required: true,
+            number: true,
+            minlength: 10,
+            maxlength: 10,
+          },
+        },
+
+        messages: {
+          name: "Your name",
+          mobile: {
+            required: "Mobile number",
+            number: "Invalid Mobile Number",
+          },
+          email: {
+            required: "Enter Email",
+            email: "Invalid Email",
+          },
+        },
+        submitHandler: function (form1) {
+          $.ajax({
+            type: "POST",
+            url: "post.php",
+            data: $(topform).serialize(),
+            beforeSend: function () {
+              $("#response").show();
+              $("#response").html("<img src='img/loading.gif' />");
+            },
+            success: function (data) {
+              if (data == 200) {
+                $("#name").val("");
+                $("#email").val("");
+                $("#mobile").val("");
+                $("#agree").val("");
+                window.setTimeout(function () {
+                  window.location.href = "action.php";
+                }, 100);
+              } else {
+                alert(data);
+                $("#response").hide();
+              }
+            },
+          });
+          return false; // required to block normal submit since you used ajax
+        },
+      });
+
+      $("#bottomform").validate({
+        rules: {
+          name: "required",
+
+          mobile: {
+            required: true,
+            number: true,
+            minlength: 10,
+            maxlength: 10,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+          message: { required: true },
+
+          agree: { required: true },
+        },
+
+        messages: {
+          name: "Your name",
+          mobile: {
+            required: "Mobile number",
+            number: "Invalid Mobile Number",
+          },
+          email: {
+            required: "Enter Email",
+            email: "Invalid Email",
+          },
+          message: { required: "Message : Let us know about your Budget" },
+          agree: {
+            required:
+              "I authorize the marketing partner to call me between 9 AM to 9 PM, to provide details of the project.",
+          },
+        },
+        submitHandler: function (bottomform) {
+          $.ajax({
+            type: "POST",
+            url: "post.php",
+            data: $(bottomform).serialize(),
+            beforeSend: function () {
+              $("#bottresponse").show();
+              $("#bottresponse").html("<img src='img/loading.gif' />");
+            },
+            success: function (data) {
+              if (data == 200) {
+                $("#name").val("");
+                $("#email").val("");
+                $("#mobile").val("");
+                $("#agree").val("");
+                window.setTimeout(function () {
+                  window.location.href = "action.php";
+                }, 100);
+              } else {
+                alert(data);
+                $("#bottresponse").hide();
+              }
+            },
+          });
+          return false; // required to block normal submit since you used ajax
+        },
+      });
+
+      ///////////////// end bottom form////////////////////////
+
+      ///////////////////////////////bottom form start ///////////////
+      $("#popupform").validate({
+        rules: {
+          name: "required",
+
+          mobile: {
+            required: true,
+            number: true,
+            minlength: 10,
+            maxlength: 10,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+        },
+
+        messages: {
+          name: "Your name",
+          mobile: {
+            required: "Mobile number",
+            number: "Invalid Mobile Number",
+          },
+          email: {
+            required: "Enter Email",
+            email: "Invalid Email",
+          },
+        },
+        submitHandler: function (popupform) {
+          $.ajax({
+            type: "POST",
+            url: "post.php",
+            data: $(popupform).serialize(),
+            beforeSend: function () {
+              $("#popupresponse").show();
+              $("#popupresponse").html("<img src='img/loading.gif' />");
+            },
+            success: function (data) {
+              if (data == 200) {
+                $("#name").val("");
+                $("#email").val("");
+                $("#mobile").val("");
+                window.setTimeout(function () {
+                  window.location.href = "action.php";
+                }, 100);
+              } else {
+                alert(data);
+                $("#popupresponse").hide();
+              }
+            },
+          });
+          return false; // required to block normal submit since you used ajax
+        },
+      });
+
+      ///////////////// end bottom form////////////////////////
+
+      ///////////////////////////////download pdf form start ///////////////
+      $("#downloadform").validate({
+        rules: {
+          name: "required",
+
+          mobile: {
+            required: true,
+            number: true,
+            minlength: 10,
+            maxlength: 10,
+          },
+          email: {
+            required: true,
+            email: true,
+          },
+        },
+
+        messages: {
+          name: "Your name",
+          mobile: {
+            required: "Mobile number",
+            number: "Invalid Mobile Number",
+          },
+          email: {
+            required: "Enter Email",
+            email: "Invalid Email",
+          },
+        },
+        submitHandler: function (downloadform) {
+          $.ajax({
+            type: "POST",
+            url: "post.php",
+            data: $(downloadform).serialize(),
+            beforeSend: function () {
+              $("#downloadresponse").show();
+              $("#downloadresponse").html("<img src='img/loading.gif' />");
+            },
+            success: function (data) {
+              if (data == 200) {
+                $("#name").val("");
+                $("#email").val("");
+                $("#mobile").val("");
+                window.setTimeout(function () {
+                  window.location.href = "download.php";
+                }, 100);
+              } else {
+                alert(data);
+                $("#downloadresponse").hide();
+              }
+            },
+          });
+          return false; // required to block normal submit since you used ajax
+        },
+      });
+      ///////////////// download pdf form////////////////////////
+    </script>
   </body>
 </html>
