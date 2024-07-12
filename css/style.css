@@ -1159,6 +1159,7 @@ ul.check-marks li:before {
   background-color: white;
   padding: 25px;
   border-radius: 10px;
+  margin-right: 10px;
 }
 .right-form-container button{
   padding: 8px;
